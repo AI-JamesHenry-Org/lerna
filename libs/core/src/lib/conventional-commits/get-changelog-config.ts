@@ -79,6 +79,13 @@ async function resolveConfigPromise(presetPackageName: string, presetConfig: obj
     }
   }
 
+  // Node.js 22+ can require() ESM modules, returning a module namespace object
+  // with { __esModule, default, ... } instead of the default export directly.
+  // Also handles interop wrappers from bundlers (e.g. esbuild, webpack).
+  if (config && config.__esModule && config.default) {
+    config = config.default;
+  }
+
   log.info("getChangelogConfig", "Successfully resolved preset %j", presetPackageName);
 
   if (isFunction(config)) {
