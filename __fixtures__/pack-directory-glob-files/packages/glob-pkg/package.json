@@ -1,0 +1,10 @@
+{
+  "name": "glob-pkg",
+  "version": "1.0.0",
+  "files": [
+    "src/**/*.mjs",
+    "src/**/*.cjs",
+    "dist/",
+    "types/glob-pkg.d.ts"
+  ]
+}
