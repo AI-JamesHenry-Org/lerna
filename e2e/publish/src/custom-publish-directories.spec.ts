@@ -12,7 +12,7 @@ expect.addSnapshotSerializer({
         .replaceAll(/integrity:\s*.*/g, "integrity: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         .replaceAll(/\d*\.\d*\s?kB package\.json/g, "XXXkb package.json")
         .replaceAll(/\d*B package\.json/g, "XXXB package.json")
-        .replaceAll(/\d*\.\d*\s?kB/g, "XXX.XXX kb")
+        .replaceAll(/\d+\.?\d*\s?kB/g, "XXX.XXX kb")
         .replaceAll(/size:\s*\d*\s?B/g, "size: XXXB")
         .replaceAll(/session\s\w{16}/g, "session XXXXXXXX")
         .replaceAll(/"vXX\.XX\.XX-0-g[a-f0-9]{7}"/g, '"vXX.XX.XX-0-gXXXXXXXX"')
