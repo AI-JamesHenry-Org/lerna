@@ -10,7 +10,7 @@ expect.addSnapshotSerializer({
     return trimEnds(
       normalizeCommitSHAs(normalizeEnvironment(str))
         .replaceAll(/integrity:\s*.*/g, "integrity: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-        .replaceAll(/\d*\.\d*\s?kB package\.json/g, "XXXkb package.json")
+        .replaceAll(/\d+\.?\d*\s?kB package\.json/g, "XXXkb package.json")
         .replaceAll(/\d*B package\.json/g, "XXXB package.json")
         .replaceAll(/\d+\.?\d*\s?kB/g, "XXX.XXX kb")
         .replaceAll(/size:\s*\d*\s?B/g, "size: XXXB")
