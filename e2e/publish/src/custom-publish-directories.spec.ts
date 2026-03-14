@@ -167,7 +167,7 @@ describe("lerna-publish-custom-publish-directories", () => {
         lerna notice
         lerna notice 📦  package-1@XX.XX.XX
         lerna notice === Tarball Contents ===
-        lerna notice 99B   lib/main.js
+        lerna notice 99B lib/main.js
         lerna notice XXXkb package.json
         lerna notice === Tarball Details ===
         lerna notice name:          package-1
